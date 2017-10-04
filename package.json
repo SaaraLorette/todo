@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/TabasaluYG/todo/issues"
   },
-  "homepage": "https://github.com/TabasaluYG/todo#readme"
+  "homepage": "https://github.com/TabasaluYG/todo#readme",
+  "dependencies": {
+    "express": "4.16.1"
+  }
 }
