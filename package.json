@@ -1,0 +1,19 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "ToDo äpp",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TabasaluYG/todo.git"
+  },
+  "author": "Argo Roots <argo@roots.ee>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TabasaluYG/todo/issues"
+  },
+  "homepage": "https://github.com/TabasaluYG/todo#readme"
+}
