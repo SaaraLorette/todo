@@ -2,11 +2,10 @@
   "name": "todo",
   "version": "1.0.0",
   "description": "ToDo äpp",
-  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon server.js"
   },
-  "repository": {
+  "repository": {   
     "type": "git",
     "url": "git+https://github.com/TabasaluYG/todo.git"
   },
@@ -17,6 +16,7 @@
   },
   "homepage": "https://github.com/TabasaluYG/todo#readme",
   "dependencies": {
-    "express": "4.16.1"
+    "express": "4.16.1",
+    "nodemon": "^1.12.1"
   }
 }
