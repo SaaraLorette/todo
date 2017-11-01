@@ -5,7 +5,7 @@
   "scripts": {
     "start": "nodemon server.js"
   },
-  "repository": {   
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/TabasaluYG/todo.git"
   },
@@ -17,6 +17,7 @@
   "homepage": "https://github.com/TabasaluYG/todo#readme",
   "dependencies": {
     "express": "4.16.1",
-    "nodemon": "^1.12.1"
+    "nodemon": "^1.12.1",
+    "pug": "^2.0.0-rc.4"
   }
 }

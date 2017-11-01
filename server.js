@@ -1,16 +1,26 @@
 const express = require('express')
 const app = express()
 
+
+app.set('view engine', 'pug')
+
 app.get('/', function (req, res) {
-  res.send('Hello World!')
+  let data = {
+    title: 'Hey',
+    message: 'Hello there!'
+  }
+  res.render('index', data)
 })
 
 app.get('/test', function (req, res) {
-  res.send('Test!')
+  let data = {
+    title: 'Test',
+    message: 'Test!'
+  }
+  res.render('index', data)
 })
+
 
 app.listen(process.env.PORT, process.env.IP, function () {
   console.log('Server listening on port ' + process.env.PORT)
 })
-
-console.log('Lõpp')
