@@ -2,8 +2,7 @@ html
     head
         title= title
     body
-        img(src='http://tyg.edu.ee/image/layout_set_logo?img_id=5861248&t=1509511805523', alt='TÜG logo')
         h1= title
-        p= message
-        p miski teine tekst
-
+        ul
+            each item in todoList
+                li= item.text
