@@ -13,15 +13,10 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 let data = {
     title: 'ToDo',
-    todoList: [
-        { text: 'Piim', isDone: false },
-        { text: 'Sai', isDone: true },
-        { text: 'Või', isDone: false }
-    ]
+    todoList: []
 }
 
 app.get('/', function (req, res) {
-
     res.render('index', data)
 })
 
