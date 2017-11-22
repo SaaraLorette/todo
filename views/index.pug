@@ -6,3 +6,5 @@ html
         ul
             each item in todoList
                 li= item.text
+        form(action='/submit_new', method='POST')
+            input(type='text', name='new_todo_item', autofocus)
