@@ -3,8 +3,21 @@ html
         title= title
     body
         h1= title
-        ul
+        ul#todo-items
             each item in todoList
                 li= item.text
-        form(action='/submit_new', method='POST')
-            input(type='text', name='new_todo_item', autofocus)
+
+        input#new-todo-item(type='text', autofocus)
+
+        script(src='https://code.jquery.com/jquery-3.2.1.min.js', integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
+        script.
+            $('#new-todo-item').on('keypress', function(e) {
+                if (e.which === 13) {
+                    var newItem = $('#new-todo-item').val()
+                    
+                    $.post('/submit_new', { new_todo_item: newItem }, function(reply) {
+                        $('#new-todo-item').val('')
+                        $('#todo-items').append('<li>' + newItem + '</li>')
+                    })
+                }
+            })

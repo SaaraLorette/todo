@@ -25,7 +25,7 @@ app.post('/submit_new', function (req, res) {
         text: req.body.new_todo_item,
         isDone: false
     })
-    res.redirect('/')
+    res.send({ item: req.body.new_todo_item })
 })
 
 
