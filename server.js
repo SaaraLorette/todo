@@ -21,11 +21,28 @@ app.get('/', function (req, res) {
 })
 
 app.post('/submit_new', function (req, res) {
-    data.todoList.push({
+    var newRow = {
+        id: data.todoList.length,
         text: req.body.new_todo_item,
         isDone: false
+    }
+
+    data.todoList.push(newRow)
+    res.send(newRow)
+})
+
+app.post('/submit_change', function (req, res) {
+    var rowId = parseInt(req.body.id)
+
+    var row = data.todoList.find(function(r) {
+        return r.id === rowId
     })
-    res.send({ item: req.body.new_todo_item })
+
+    if (row) {
+        row.isDone = req.body.isDone
+    }
+    res.send(row)
+
 })
 
 
